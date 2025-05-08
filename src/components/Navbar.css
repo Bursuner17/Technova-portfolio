@@ -1,10 +1,9 @@
+/* Navbar Styles */
 .navbar {
-  background-color: #1E40AF;
+  background-color: #1E40AF; /* Deep blue background */
   color: white;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: relative;
-  z-index: 10;
+  padding: 1rem 2rem; /* Add some padding for breathing space */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
 }
 
 .navbar-container {
@@ -16,66 +15,68 @@
 }
 
 .logo {
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-size: 2rem; /* Adjust size for a sleek, professional logo */
+  font-weight: 700; /* Bold text for the logo */
+  letter-spacing: 1px; /* Add a bit of spacing between letters for clarity */
 }
 
 .nav-links {
   display: flex;
-  gap: 2rem;
-  list-style: none;
+  gap: 2rem; /* Increase gap for spacing between items */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links li a {
+.nav-link {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500; /* Semi-bold for better legibility */
   color: white;
   text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: background 0.3s ease, transform 0.2s;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
 }
 
-.nav-links li a:hover {
-  background-color: #2563eb;
-  transform: scale(1.05);
+.nav-link:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+  color: #60A5FA; /* Light blue color on hover */
 }
 
-/* Hamburger for small screens */
+.nav-links.open {
+  display: block; /* Show links when menu is open */
+}
+
 .hamburger {
   display: none;
-  font-size: 1.8rem;
+  font-size: 2rem;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
+  padding: 0 0.5rem;
+  transition: transform 0.2s ease-in-out;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
+  .navbar {
+    padding: 1rem; /* Adjust padding for mobile */
   }
 
   .nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #1E40AF;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1.5rem 0;
-    display: none;
+    display: none; /* Hide links by default on small screens */
+    flex-direction: column; /* Stack links vertically on smaller screens */
+    align-items: center; /* Center align the links */
+    gap: 1.5rem; /* Decrease gap for smaller screens */
   }
 
   .nav-links.open {
-    display: flex;
+    display: flex; /* Show links when menu is open */
   }
 
-  .nav-links li a {
-    font-size: 1.2rem;
+  .nav-link {
+    font-size: 1.2rem; /* Increase font size for better visibility on small screens */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon on small screens */
   }
 }
