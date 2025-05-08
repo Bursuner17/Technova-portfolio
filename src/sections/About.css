@@ -1,5 +1,3 @@
-/* About.css */
-
 .about-section {
     background-color: white; /* Set the section background to white */
     color: #ede8e8; /* Change text color to black for better readability */
@@ -83,15 +81,15 @@
 
 /* Different gradients for each card */
 .about-card:nth-child(1)::before {
-    background: linear-gradient(135deg, #2563eb, #1e40af); /* Frontend */
+    background: linear-gradient(135deg, #2563eb, #1e40af);
 }
 
 .about-card:nth-child(2)::before {
-    background: linear-gradient(135deg, #10b981, #059669); /* Backend */
+    background: linear-gradient(135deg, #10b981, #059669);
 }
 
 .about-card:nth-child(3)::before {
-    background: linear-gradient(135deg, #ec4899, #db2777); /* Other Skills */
+    background: linear-gradient(135deg, #ec4899, #db2777);
 }
 
 /* Hover Effects */
@@ -146,3 +144,4 @@
         width: 100%;
     }
 }
+ 

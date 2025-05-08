@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaCode, FaServer, FaTools } from 'react-icons/fa';
+import { FaCode, FaServer, FaTools } from 'react-icons/fa'; // ✅ Added icons
 import './About.css';
 
 function About() {
@@ -14,56 +14,50 @@ function About() {
         </p>
 
         <div className="about-cards">
-          {/* Card 1 */}
-          <div className="about-card-wrapper">
-            <motion.div
-              className="about-card card-1"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <FaCode className="about-icon" />
-              <h3 className="about-card-title">Frontend</h3>
-              <p className="about-card-description">
-                React, HTML, CSS, Tailwind, JavaScript
-              </p>
-            </motion.div>
-          </div>
+          {/* Animated Card 1 */}
+          <motion.div
+            className="about-card card-1"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <FaCode className="about-icon" /> {/* ✅ Added icon */}
+            <h3 className="about-card-title">Frontend</h3>
+            <p className="about-card-description">
+              React, HTML, CSS, Tailwind, JavaScript
+            </p>
+          </motion.div>
 
-          {/* Card 2 */}
-          <div className="about-card-wrapper">
-            <motion.div
-              className="about-card card-2"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <FaServer className="about-icon" />
-              <h3 className="about-card-title">Backend</h3>
-              <p className="about-card-description">
-                Node.js, Express.js, MongoDB, SQL, PostgreSQL
-              </p>
-            </motion.div>
-          </div>
+          {/* Animated Card 2 */}
+          <motion.div
+            className="about-card card-2"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <FaServer className="about-icon" /> {/* ✅ Added icon */}
+            <h3 className="about-card-title">Backend</h3>
+            <p className="about-card-description">
+              Node.js, Express.js, MongoDB, SQL, PostgreSQL
+            </p>
+          </motion.div>
 
-          {/* Card 3 */}
-          <div className="about-card-wrapper">
-            <motion.div
-              className="about-card card-3"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
-            >
-              <FaTools className="about-icon" />
-              <h3 className="about-card-title">Other Skills</h3>
-              <p className="about-card-description">
-                Git, Figma, Postman, APIs, Firebase
-              </p>
-            </motion.div>
-          </div>
+          {/* Animated Card 3 */}
+          <motion.div
+            className="about-card card-3"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <FaTools className="about-icon" /> {/* ✅ Added icon */}
+            <h3 className="about-card-title">Other Skills</h3>
+            <p className="about-card-description">
+              Git, Figma, Postman, APIs, Firebase
+            </p>
+          </motion.div>
         </div>
       </div>
     </section>
