@@ -1,28 +1,28 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link for routing
-import './Navbar.css'; // if the CSS is in the same folder
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 function Navbar() {
-  return (
-    <nav className="bg-blue-600 text-white p-4">
-      <div className="flex justify-between items-center">
-        {/* TechNova logo on the left */}
-        <h1 className="text-2xl font-bold">TechNova</h1>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-        {/* Navigation links aligned to the right */}
-        <ul className="flex gap-8">
-          <li>
-            <Link to="/" className="hover:text-blue-300 transition">Home</Link> {/* Home link */}
-          </li>
-          <li>
-            <Link to="/about" className="hover:text-blue-300 transition">About</Link> {/* About link */}
-          </li>
-          <li>
-            <Link to="/projects" className="hover:text-blue-300 transition">Projects</Link> {/* Projects link */}
-          </li>
-          <li>
-            <Link to="/contact" className="hover:text-blue-300 transition">Contact</Link> {/* Contact link */}
-          </li>
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  return (
+    <nav className="navbar">
+      <div className="navbar-container">
+        <h1 className="logo">TechNova</h1>
+
+        <button className="hamburger" onClick={toggleMenu}>
+          ☰
+        </button>
+
+        <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+          <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+          <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
+          <li><Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link></li>
+          <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
         </ul>
       </div>
     </nav>
