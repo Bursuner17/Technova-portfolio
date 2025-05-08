@@ -1,0 +1,146 @@
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #2980b9;
+}
+
+/* Contact Info Section */
+.contact-info {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Space between icon and text */
+  font-size: 1rem;
+}
+
+/* Icon Styling */
+.icon {
+  color: #3498db;
+  font-size: 1.2rem;
+}
+
+/* Social Media Links */
+.social-media {
+  margin-top: 1rem;
+}
+
+.social-media a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between icon and text */
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #0077b6;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #023e8a;
+}
+
+/* Contact Info Links */
+.info-link {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.info-link:hover {
+  color: #023e8a;
+  text-decoration: underline;
+}
+/* FAQ Section */
+.faq-section {
+  margin-top: 2rem;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.faq-question {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #3498db;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: #2980b9;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #555;
+  padding-left: 20px;
+}
+.privacy-link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.privacy-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.privacy-link a:hover {
+  text-decoration: underline;
+}

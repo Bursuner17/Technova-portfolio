@@ -1,0 +1,233 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4; /* Light background for the whole page */
+}
+
+/* About Section */
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* Container within About Section */
+.about-page-container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #f0f4f8; /* Light greyish blue */
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: none; /* Ensure no border/frame is applied */
+}
+
+/* Hero Content */
+.hero-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* Profile Section */
+.profile-section {
+  flex: 1;
+  max-width: 400px;
+  margin-right: 20px;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Description Section */
+.description-section {
+  flex: 2;
+  text-align: left;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* Skills Section */
+.skills-section {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: #ffffff; /* White for clean separation */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack the content */
+}
+
+.skills-container {
+  max-width: 1000px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+  gap: 20px;
+  padding: 20px; /* Add some padding for better spacing */
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #333;
+  width: 100%;
+  grid-column: span 4; /* Title spans across all columns */
+}
+
+/* Skill Card Styles */
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9; /* Light background for each skill */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-10px); /* Slight upward shift on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.skill:hover .skill-icon {
+  transform: scale(1.1); /* Slight zoom-in effect on hover */
+}
+
+/* Skill Bar */
+.skill-bar {
+  width: 100%;
+  height: 16px; /* Increased height */
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-progress {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 1s ease-in-out; /* Smooth width transition */
+  width: 0; /* Default width (will be set dynamically) */
+}
+
+/* Specific Colors for Skill Bars (Unique Colors for Each Skill) */
+.skill.javascript .skill-progress {
+  background: #f7df1e; /* Yellow for JavaScript */
+}
+
+.skill.react .skill-progress {
+  background: #61dafb; /* Light blue for React */
+}
+
+.skill.node .skill-progress {
+  background: #68a063; /* Green for Node.js */
+}
+
+.skill.html .skill-progress {
+  background: #e34c26; /* Red for HTML */
+}
+
+.skill.css .skill-progress {
+  background: #1572b6; /* Blue for CSS */
+}
+
+.skill.bootstrap .skill-progress {
+  background: #563d7c; /* Purple for Bootstrap */
+}
+
+/* Skill Percentage */
+.skill-percentage {
+  font-size: 1rem; /* Slightly larger text */
+  font-weight: 600;
+  color: #fff; /* White for better contrast */
+  position: absolute;
+  top: 50%; /* Vertically center the text */
+  left: 50%; /* Horizontally center the text */
+  transform: translate(-50%, -50%); /* Fine-tune centering */
+  z-index: 2; /* Ensures percentage is above the progress bar */
+  padding: 0 5px; /* Added small padding for better readability */
+}
+/* Call to Action Section */
+.cta-section {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: #333; /* Dark background for contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Container for CTA Content */
+.cta-container {
+  max-width: 1000px;
+  width: 100%;
+  color: #fff; /* White text color */
+}
+
+/* CTA Text */
+.cta-text {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* CTA Button */
+.cta-button {
+  background-color: #e34c26; /* Red color matching HTML skill bar */
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Hover Effect */
+.cta-button:hover {
+  background-color: #ff7f50; /* Lighter red for hover effect */
+  transform: scale(1.05); /* Slight zoom-in effect */
+}

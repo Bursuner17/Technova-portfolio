@@ -1,0 +1,182 @@
+/* Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f8fafc; /* Light background */
+  color: #333; /* Dark text */
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('https://your-image-link.com/hero-image.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.hero .cta-button {
+  background-color: #1E40AF;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero .cta-button:hover {
+  background-color: #3b82f6;
+}
+
+/* About Section */
+.about {
+  background-color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.125rem;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about .skills {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.about .skills div {
+  text-align: center;
+}
+
+.about .skills i {
+  font-size: 3rem;
+  color: #1E40AF;
+}
+
+.about .skills p {
+  margin-top: 10px;
+  font-size: 1.125rem;
+}
+
+/* Projects Section */
+.projects {
+  padding: 50px 20px;
+  background-color: #F3F4F6;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.projects .project-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.projects .project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.projects .project-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.projects .project-card .view-button {
+  background-color: #1E40AF;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.projects .project-card .view-button:hover {
+  background-color: #3b82f6;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #1E40AF;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  font-size: 1rem;
+}
+
+.footer .social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer .social-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.footer .social-links a:hover {
+  color: #3b82f6;
+}

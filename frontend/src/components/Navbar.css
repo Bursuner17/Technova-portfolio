@@ -1,0 +1,56 @@
+/* Navbar Styles */
+nav {
+    background-color: #1E40AF; /* Deep blue background */
+    color: white;
+    padding: 1rem 2rem; /* Add some padding for breathing space */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  }
+  
+  nav h1 {
+    font-size: 2rem; /* Adjust size for a sleek, professional logo */
+    font-weight: 700; /* Bold text for the logo */
+    letter-spacing: 1px; /* Add a bit of spacing between letters for clarity */
+  }
+  
+  ul {
+    display: flex;
+    gap: 2rem; /* Increase gap for spacing between items */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul li {
+    font-size: 1rem;
+    font-weight: 500; /* Semi-bold for better legibility */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+  }
+  
+  ul li:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    color: #60A5FA; /* Light blue color on hover */
+  }
+  
+  ul li:first-child {
+    font-size: 1.2rem; /* Slightly larger font for Home (optional) */
+    font-weight: 600;
+  }
+  
+  /* Add responsive design for smaller screens */
+  @media (max-width: 768px) {
+    nav {
+      padding: 1rem; /* Adjust padding for mobile */
+    }
+  
+    ul {
+      flex-direction: column; /* Stack links vertically on smaller screens */
+      align-items: center; /* Center align the links */
+      gap: 1.5rem; /* Decrease gap for smaller screens */
+    }
+  
+    ul li {
+      font-size: 1.2rem; /* Increase font size for better visibility on small screens */
+    }
+  }
+  

@@ -1,0 +1,148 @@
+/* About.css */
+
+.about-section {
+    background-color: white; /* Set the section background to white */
+    color: #ede8e8; /* Change text color to black for better readability */
+    padding: 60px 20px;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+.about-container {
+    max-width: 1200px; /* Set a max width for the container */
+    margin: 0 auto; /* Center the container */
+    padding: 40px; /* Added padding */
+    background-color: #2d3748; /* Keep the container's dark background */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Soft shadow to make the container pop */
+}
+
+.about-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center; /* Center the heading */
+}
+
+.about-description {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 50px;
+    color: #d1d5db;
+    text-align: center; /* Center the description */
+}
+
+.about-cards {
+    display: flex;
+    justify-content: space-between; /* Ensure space between cards horizontally */
+    gap: 30px;
+    flex-wrap: no-wrap; /* Prevent wrapping to keep cards in a single row */
+    align-items: center;
+}
+
+/* Wrapper box for each card */
+.about-card-wrapper {
+    padding: 10px;
+    border-radius: 20px;
+    background: #1f2937; /* Dark box background for cards */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+    width: 100%; /* Set to 100% to ensure full width in small screens */
+    max-width: 300px; /* Limit the maximum width */
+}
+
+/* Individual cards */
+.about-card {
+    padding: 40px 25px;
+    border-radius: 15px;
+    color: white;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background: #1f2937; /* Default background */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Gradient borders effect */
+.about-card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+/* Different gradients for each card */
+.about-card:nth-child(1)::before {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+
+.about-card:nth-child(2)::before {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.about-card:nth-child(3)::before {
+    background: linear-gradient(135deg, #ec4899, #db2777);
+}
+
+/* Hover Effects */
+.about-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+}
+
+.about-card-wrapper:hover .about-card {
+    transform: translateY(-8px); /* Slight pop-up */
+}
+
+.about-card:hover::before {
+    opacity: 1;
+}
+
+/* Icon Styles */
+.about-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+/* Card Title */
+.about-card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Card Description */
+.about-card-description {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-cards {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap; /* Allow wrapping in smaller screens */
+    }
+
+    .about-card-wrapper {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .about-card {
+        width: 100%;
+    }
+}

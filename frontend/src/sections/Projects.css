@@ -1,0 +1,105 @@
+/* Projects.css */
+/* Projects.css */
+
+/* Remove the negative margin-top and reduce padding */
+.projects-section {
+    background-color: #ffffff;
+    padding: 10px 20px; /* Adjust padding to match the About section */
+    text-align: center;
+}
+
+/* Adjust container padding and other properties */
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px; /* Match the padding in About container */
+    background-color: #4B5563; /* Keep the same background color */
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Match box-shadow from About container */
+}
+
+  /* Projects.css */
+
+/* Reduce space above the project title */
+.projects-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-top: 0; /* Remove any top margin */
+    margin-bottom: 20px; /* Keep the bottom margin for spacing */
+    color: #ffffff; /* White title color for contrast */
+}
+
+  .projects-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e5e7eb; /* Lighter text color for better readability */
+    margin-bottom: 30px;
+  }
+  
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .project-card {
+    background-color: #f9fafb;
+    padding: 20px;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* More intense shadow on hover */
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .project-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 10px;
+  }
+  
+  .project-description {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-bottom: 20px;
+  }
+  
+  /* Add clickable link to each project */
+  .project-link {
+    font-size: 1.1rem;
+    color: #2563eb;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    color: #1e40af; /* Darker shade on hover */
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .projects-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .project-card {
+      width: 90%; /* Makes cards take more space on smaller screens */
+    }
+  }
+  
