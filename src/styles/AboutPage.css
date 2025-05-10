@@ -3,9 +3,10 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background-color: #f4f4f4;
+  color: #333;
 }
 
-/* About Section */
+/* About Page */
 .about-page {
   display: flex;
   flex-direction: column;
@@ -14,6 +15,7 @@ body {
   padding: 40px 20px;
 }
 
+/* About Page Container */
 .about-page-container {
   width: 100%;
   max-width: 1200px;
@@ -21,14 +23,13 @@ body {
   border-radius: 20px;
   padding: 40px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  color: #333;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
-/* Hero Content */
+/* Hero Section */
 .hero-content {
   display: flex;
   align-items: center;
@@ -48,6 +49,11 @@ body {
   max-width: 300px;
   border-radius: 15px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
 }
 
 .description-section {
@@ -59,12 +65,14 @@ body {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 20px;
+  color: #333;
 }
 
 .intro {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 30px;
+  color: #555;
 }
 
 /* Skills Section */
@@ -74,7 +82,6 @@ body {
   background-color: #ffffff;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -221,4 +228,69 @@ body {
 .cta-button:hover {
   background-color: #0056b3;
   color: #fff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about-page-container {
+    padding: 30px 20px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-section {
+    margin-right: 0;
+    max-width: 80%;
+  }
+
+  .description-section {
+    flex: 1;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .skills-title {
+    font-size: 2rem;
+  }
+
+  .cta-text {
+    font-size: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .intro {
+    font-size: 0.95rem;
+  }
+
+  .cta-text {
+    font-size: 1.3rem;
+  }
+
+  .cta-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
 }
