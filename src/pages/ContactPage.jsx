@@ -10,6 +10,8 @@ import {
   FaMapMarkerAlt,
 } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import '../styles/ContactPage.css';
 
 const ContactPage = () => {
@@ -38,11 +40,11 @@ const ContactPage = () => {
       'zD7oUs5r9rHg_lZCG'
     ).then(
       () => {
-        alert(`Thank you ${formData.name}, your message has been sent successfully!`);
+        toast.success(`Thank you ${formData.name}, your message has been sent successfully!`);
         setFormData({ name: '', email: '', message: '' });
       },
       (error) => {
-        alert('Oops! Something went wrong. Please try again later.');
+        toast.error('Oops! Something went wrong. Please try again later.');
         console.error('EmailJS Error:', error);
       }
     );
@@ -141,6 +143,9 @@ const ContactPage = () => {
           <Link to="/privacy-policy" className="privacy-link-text">Privacy Policy</Link>.
         </p>
       </div>
+
+      {/* Toast Notifications */}
+      <ToastContainer position="top-right" autoClose={4000} hideProgressBar={false} newestOnTop />
     </section>
   );
 };
