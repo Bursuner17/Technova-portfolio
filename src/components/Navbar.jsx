@@ -31,6 +31,9 @@ function Navbar() {
             <Link to="/projects" className="nav-link">Projects</Link> {/* Projects link */}
           </li>
           <li>
+            <Link to="/services" className="nav-link">Services</Link> {/* Projects link */}
+          </li>
+          <li>
             <Link to="/contact" className="nav-link">Contact</Link> {/* Contact link */}
           </li>
         </ul>
