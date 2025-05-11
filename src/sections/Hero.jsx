@@ -79,8 +79,8 @@ function Hero() {
           >
             <a href="https://wa.me/+254748259452" target="_blank" rel="noopener noreferrer" className="social-icon whatsapp">WhatsApp</a>
             <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">LinkedIn</a>
-            <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" className="social-icon facebook">Facebook</a>
-            <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" className="social-icon instagram">Instagram</a>
+            <a href="https://facebook.com/sammy.bursuner" target="_blank" rel="noopener noreferrer" className="social-icon facebook">Facebook</a>
+            <a href="https://instagram.com/technovabursuner" target="_blank" rel="noopener noreferrer" className="social-icon instagram">Instagram</a>
           </motion.div>
         </div>
       </motion.div>

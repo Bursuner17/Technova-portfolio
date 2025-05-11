@@ -29,19 +29,25 @@ const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Prepare the dynamic data for EmailJS
+    const emailParams = {
+      from_name: formData.name,  // Correctly mapping the name placeholder in the template
+      from_email: formData.email, 
+      message: formData.message,
+      time: new Date().toLocaleString(), // Current time for personalization
+    };
+
+    // Send the email using EmailJS
     emailjs.send(
-      'service_cv6albc',
-      'template_vg8yyfy',
-      {
-        from_name: formData.name,
-        from_email: formData.email,
-        message: formData.message,
-      },
-      'zD7oUs5r9rHg_lZCG'
-    ).then(
+      'service_cv6albc',  // Your EmailJS service ID
+      'template_vg8yyfy',  // Your EmailJS template ID
+      emailParams,         // Dynamic data to be passed into the template
+      'zD7oUs5r9rHg_lZCG'  // Your EmailJS user ID
+    )
+    .then(
       () => {
         toast.success(`Thank you ${formData.name}, your message has been sent successfully!`);
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: '', email: '', message: '' });  // Reset the form
       },
       (error) => {
         toast.error('Oops! Something went wrong. Please try again later.');
@@ -113,7 +119,7 @@ const ContactPage = () => {
       {/* FAQ Section */}
       <div className="faq-section">
         <h3>Frequently Asked Questions</h3>
-        {[
+        {[ 
           {
             q: 'What is your response time?',
             a: 'I usually respond within 24 hours during business days.',
