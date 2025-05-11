@@ -61,12 +61,12 @@ function Hero() {
             </motion.a>
 
             <motion.a
-              href="#projects"
+              href="#services"
               className="hero-button-secondary"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              See My Work
+              See My Services
             </motion.a>
           </motion.div>
 
@@ -77,7 +77,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 1 }}
           >
-            <a href="https://wa.me/your-number" target="_blank" rel="noopener noreferrer" className="social-icon whatsapp">WhatsApp</a>
+            <a href="https://wa.me/+254748259452" target="_blank" rel="noopener noreferrer" className="social-icon whatsapp">WhatsApp</a>
             <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">LinkedIn</a>
             <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" className="social-icon facebook">Facebook</a>
             <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" className="social-icon instagram">Instagram</a>

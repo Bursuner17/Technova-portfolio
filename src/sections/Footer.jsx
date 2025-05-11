@@ -42,7 +42,7 @@ function Footer() {
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
         <a
-          href="https://wa.me/yourwhatsapplink"
+          href="https://wa.me/+254748259452"
           target="_blank"
           rel="noopener noreferrer"
           className="footer-icon whatsapp"

@@ -7,7 +7,6 @@ import About from './sections/About';
 import Projects from './sections/Projects';
 import Footer from './sections/Footer';
 import AboutPage from './pages/AboutPage';
-import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage'; // ✅ Import PrivacyPolicyPage
 import Services from './pages/Services';
@@ -24,13 +23,11 @@ function App() {
             <>
               <Hero />
               <About />
-              <Projects />
             </>
           }
         />
         {/* Separate pages */}
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} /> {/* ✅ Added Privacy Policy route */}

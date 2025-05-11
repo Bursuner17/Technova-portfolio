@@ -28,9 +28,6 @@ function Navbar() {
             <Link to="/about" className="nav-link">About</Link> {/* About link */}
           </li>
           <li>
-            <Link to="/projects" className="nav-link">Projects</Link> {/* Projects link */}
-          </li>
-          <li>
             <Link to="/services" className="nav-link">Services</Link> {/* Projects link */}
           </li>
           <li>
