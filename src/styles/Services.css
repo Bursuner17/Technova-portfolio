@@ -87,7 +87,7 @@
 /* Toggle Horizontal Layout for Larger Screens */
 .service-cards {
   display: flex;
-  gap: 20px;
+  gap: 30px; /* Increased gap between service cards */
   margin-top: 30px;
   padding: 0 10px;
   overflow-x: auto; /* Allows horizontal scrolling */
@@ -103,12 +103,13 @@
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 20px; /* Space between cards */
 }
 
 .service-card:hover {
   transform: scale(1.03);
   background-color: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18); /* Glow effect */
 }
 
 .service-icon {
@@ -193,12 +194,13 @@
 
 /* === INDIVIDUAL SERVICE CARDS WITH UNIQUE COLORS === */
 
-/* Unique colors for small service cards */
+/* Unique colors for small service cards with glow effect */
 .service-web {
   background-color: #8e44ad; /* Purple */
 }
 .service-web:hover {
   background-color: #9b59b6;
+  box-shadow: 0 0 15px #8e44ad; /* Purple glow */
 }
 
 .service-mobile {
@@ -206,6 +208,7 @@
 }
 .service-mobile:hover {
   background-color: #27ae60;
+  box-shadow: 0 0 15px #2ecc71; /* Green glow */
 }
 
 .service-seo {
@@ -213,6 +216,7 @@
 }
 .service-seo:hover {
   background-color: #e67e22;
+  box-shadow: 0 0 15px #f39c12; /* Yellow glow */
 }
 
 .service-branding {
@@ -220,6 +224,7 @@
 }
 .service-branding:hover {
   background-color: #c0392b;
+  box-shadow: 0 0 15px #e74c3c; /* Red glow */
 }
 
 .service-ai {
@@ -227,4 +232,5 @@
 }
 .service-ai:hover {
   background-color: #2980b9;
+  box-shadow: 0 0 15px #3498db; /* Blue glow */
 }
