@@ -61,7 +61,7 @@ const ContactPage = () => {
         <div className="card">
           <h3>Contact Information</h3>
           <p><FaPhoneAlt className="icon" /> <a href="tel:+254748259452">+254 748 259 452</a></p>
-          <p><FaEnvelope className="icon" /> <a href="mailto:technova52@gmail.com">technova52@gmail.com</a></p>
+          <p><FaEnvelope className="icon" /> <a href="mailto:technovabursuner@gmail.com">technovabursuner@gmail.com</a></p>
           <div className="social-links">
             <a href="https://wa.me/+254748259452" target="_blank" rel="noreferrer"><FaWhatsapp className="icon" /></a>
             <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer"><FaLinkedin className="icon" /></a>
@@ -73,7 +73,7 @@ const ContactPage = () => {
         {/* Office Location Card */}
         <div className="card">
           <h3>Office Location</h3>
-          <p><FaMapMarkerAlt className="icon" /> Nairobi, Kenya</p>
+          <p><FaMapMarkerAlt className="icon" /> Embu, Kenya</p>
           <p><strong>Availability:</strong> Mon - Fri, 9am - 5pm (EAT)</p>
           <p><strong>Remote Services:</strong> Available globally</p>
         </div>
