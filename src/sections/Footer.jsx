@@ -15,7 +15,7 @@ function Footer() {
     >
       <div className="footer-container">
         <a
-          href="https://www.facebook.com/sammy.bursuner"
+          href="https://www.facebook.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="footer-icon facebook"
