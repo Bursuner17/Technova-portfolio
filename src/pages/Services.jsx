@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate for React Router v6
 import { FaArrowRight } from 'react-icons/fa';
 import '../styles/Services.css';
 
@@ -65,16 +65,59 @@ const serviceCategories = [
 
 const Services = () => {
   const [openCategory, setOpenCategory] = useState(null);
+  const [selectedService, setSelectedService] = useState(null);
+  const [showInterestModal, setShowInterestModal] = useState(false);
+  const [showOptionsModal, setShowOptionsModal] = useState(false);
+
+  const navigate = useNavigate(); // Use useNavigate for programmatic navigation in React Router v6
 
   const toggleCategory = (id) => {
     setOpenCategory((prev) => (prev === id ? null : id));
+  };
+
+  const handleServiceClick = (service) => {
+    setSelectedService(service);
+    setShowInterestModal(true);
+  };
+
+  const handleInterestResponse = (isInterested) => {
+    setShowInterestModal(false);
+    if (isInterested) {
+      setShowOptionsModal(true);
+    } else {
+      setSelectedService(null);
+    }
+  };
+
+  const handleProceedOption = (option) => {
+    setShowOptionsModal(false);
+
+    const phone = '+254748259452';
+    switch (option) {
+      case 'whatsapp':
+        window.open(`https://wa.me/${phone}`, '_blank');
+        break;
+      case 'call':
+        window.open(`tel:${phone}`, '_self');
+        break;
+      case 'contact':
+        navigate('/contact'); // Navigate to the contact page
+        break;
+      default:
+        break;
+    }
+
+    setSelectedService(null);
   };
 
   return (
     <div className="services-page">
       <h1 className="page-title">My Professional Services</h1>
       <p className="services-intro">
-        You're welcome to explore all the services I offer below. If you're interested, reach out via the <Link to="/contact">Contact Form</Link>, WhatsApp, or call.
+        You're welcome to explore all the services I offer below. If you're interested, reach out via the{' '}
+        <Link to="/contact">Contact Form</Link>,{' '}
+        <a href="https://wa.me/+254748259452" target="_blank" rel="noopener noreferrer">WhatsApp</a>, or{' '}
+        <a href="tel:+254748259452" target="_blank" rel="noopener noreferrer">Call</a>.
       </p>
 
       <div className="categories-container">
@@ -96,6 +139,7 @@ const Services = () => {
                     className="service-card"
                     key={i}
                     style={{ backgroundColor: service.color }}
+                    onClick={() => handleServiceClick(service)}
                   >
                     <div className="service-icon">
                       <img
@@ -113,6 +157,33 @@ const Services = () => {
           </div>
         ))}
       </div>
+
+      {/* First Modal: Interest Question */}
+      {showInterestModal && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <h2>Are you interested in this service?</h2>
+            <div className="modal-buttons">
+              <button onClick={() => handleInterestResponse(true)}>Yes</button>
+              <button onClick={() => handleInterestResponse(false)}>No</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Second Modal: Proceed Options */}
+      {showOptionsModal && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <h2>How would you like to proceed?</h2>
+            <div className="modal-buttons">
+              <button onClick={() => handleProceedOption('whatsapp')}>WhatsApp</button>
+              <button onClick={() => handleProceedOption('call')}>Call</button>
+              <button onClick={() => handleProceedOption('contact')}>Contact Form</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
